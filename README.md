@@ -62,3 +62,79 @@
    Download and install Python 3 from the official website: https://www.python.org
    
    During installation, make sure to check “Add Python to PATH”.
+
+   Verify installation:
+
+   python --version
+
+   Step 2: Create Project Folder
+
+   Create and move into your project:
+   
+  mkdir flask-notes-app
+  
+  cd flask-notes-app
+
+  Step 3: Create a virtual environment:
+
+  A virtual environment keeps project dependencies separate.
+
+  python -m venv venv
+
+  Step 4: Activate the virtual environment:
+
+  Git Bash:
+
+  source venv/Scripts/activate
+
+  Windows CMD:
+
+  venv\Scripts\activate
+  
+  You should see (venv) in your terminal if activation is successful.
+
+  On MacOs/Linux:
+
+  source venv/bin/activate
+
+  Step 5: Install Flask:
+
+  Install Flask inside the virtual environment
+
+  pip install flask
+
+  Step 6: Verify the Installation:
+
+  Check the installed packages
+
+  pip list
+
+  You should see Flask in the list
+
+  Troubleshooting
+
+  Issue 1: python not recognized
+
+  Cause: Python is not added to your systems path during installation.
+
+  Fix : Reinstall python and make sure you check : 'Add python to PATH during setup.'
+
+  Issue 2: venv\Script\activate not working.
+
+  Cause: Wrong terminal or wrong activation command.
+
+  Fix: Use the correct command based on your OS.
+
+  Issue 3: Flask not found after installation.
+
+  Cause: Flask installed outside virtual environment.
+
+  Fix: Activate virtual environment first and then you reinstall.
+
+5. MINIMAL WORKING EXAMPLE
+   
+
+  
+
+
+
