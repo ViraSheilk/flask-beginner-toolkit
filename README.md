@@ -101,15 +101,23 @@
 
   Install Flask inside the virtual environment
 
+  <img width="303" height="182" alt="image" src="https://github.com/user-attachments/assets/c9e722d2-a3ab-41c6-9f70-48176e8306f6" />
+
+
   pip install flask
 
   Step 6: Verify the Installation:
 
   Check the installed packages
 
+  <img width="541" height="217" alt="image" src="https://github.com/user-attachments/assets/d3616a66-6023-4ef6-a23b-4cb8e8a59c6b" />
+
+
   pip list
 
   You should see Flask in the list
+
+  <img width="292" height="184" alt="image" src="https://github.com/user-attachments/assets/3b9a36ab-a5aa-48f7-924c-2a3de7243f4c" />
 
   Troubleshooting
 
@@ -149,7 +157,142 @@
 
    Project Structure
 
+   Your repository should look like this:
+
    <img width="191" height="224" alt="image" src="https://github.com/user-attachments/assets/e649dc9e-5595-4e3e-bef2-8c71e34b2e92" />
+
+   Part 1: Basic Flask Web Server
+
+   app.py
+
+   This is the starting point of your web application.
+
+   In you app.py write the following code:
+
+   Step 1: Import Flask
+
+   from flask import Flask
+
+   Step 2: Create the Flask app
+
+   app=Flask(__name__)
+
+   Explanation
+   
+   Flask is the framework used to create web applications.
+
+   __name__ tells Flask where the application is located.
+
+   This initializes your web server.
+
+   Step 3: Create a route
+
+   @app.route("/")
+     def home():
+    return "Welcome to my Notes App"
+
+   "app.route("/") defines the homepage of your web app.
+
+   When a user visits /, Flask runs the home() function.
+
+   The function then returns text that is displayed in the browser.
+
+   Step 4: Run the server
+
+   if __name__== "__main__":
+
+   app.run(debug=True)
+
+   This starts the Flask development server.
+
+   debug=True allows automatic reloading and error messages
+
+     <img width="319" height="165" alt="image" src="https://github.com/user-attachments/assets/846c0d07-85d8-4519-bd74-be059fac9df8" />
+
+
+   Running the Application
+
+   Step 1: Start the server
+   
+   <img width="300" height="50" alt="image" src="https://github.com/user-attachments/assets/6fa6bf0b-5814-4b27-be03-6e6fad7dd9c9" />
+
+   Step 2: Visit the browser
+   
+   <img width="672" height="118" alt="image" src="https://github.com/user-attachments/assets/d90a09c6-52d9-425d-9da9-562c75a51c3d" />
+
+   Expected output:
+
+   <img width="361" height="216" alt="image" src="https://github.com/user-attachments/assets/0f785a3c-32b2-4371-bb59-ea9437dc28b0" />
+
+   In this stage Flask:
+
+   -Starts a local web server.
+   
+   -Responds to your browser requests.
+   
+   -Displays a basic message on the homepage.
+
+   This confirms your backend set up works correctly before adding more features.
+
+ Common Beginner Issues
+
+ Issue                                                         Cause                                                       Fix
+ 
+ ModuleNotFoundError: Flask                                    Flask not intalled                                          Run pip install Flask
+ 
+ Page not loading                                              Server not running                                          Run python app.py
+ 
+ Port already in use                                           Another Flask app running                                   Change port or stop previous server
+ 
+
+ 5.2 Connecting Flask to HTML Templates
+
+ In this step we replace plain text responses with a real HTML page.
+
+ Step 1: Update your app.py
+
+  Update your import line to:  from flask import Flask, render_template 
+
+  Flask creates the app, while render_template sends the HTML files to the browser.
+
+Step 2: Modify your routes
+
+ Upgrade your routes to:
+
+  @app.route("/")
+def home():
+    return render_template("index.html") 
+
+This now loads the HTML file that comes from the templates folder.
+
+Step 3: Create your HTML File
+
+<img width="608" height="228" alt="image" src="https://github.com/user-attachments/assets/2cf33b89-226d-4797-b2f5-05f3edda9033" />
+
+Step 3: Run your app
+
+Run and open your browser through python app.py
+
+<img width="317" height="109" alt="image" src="https://github.com/user-attachments/assets/ec067e2c-d01c-4de0-8c04-2476dc50fd4d" />
+
+This helps you understand:
+
+How Flask serves HTML Files.
+
+How render_templates() works.
+
+How frontend connects to backend.
+
+
+
+    
+
+ 
+
+
+
+
+   
    
 
 
