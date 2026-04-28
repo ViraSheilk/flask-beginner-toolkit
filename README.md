@@ -133,6 +133,28 @@
 
 5. MINIMAL WORKING EXAMPLE
    
+   Overview
+   
+   This steps walks you through building and running a simple Flask Notes application.
+
+   This project is split into one minimal web MVP that demonstrates Flask components:
+
+   Creating a web server.
+
+   Defining routes.
+
+   Returning responses in the browser.
+
+   At this stage, the application does not yet store notes permanently but instead focuses on understanding how flask works before adding features.
+
+   Project Structure
+
+   <img width="191" height="224" alt="image" src="https://github.com/user-attachments/assets/e649dc9e-5595-4e3e-bef2-8c71e34b2e92" />
+   
+
+
+   
+   
 
   
 
