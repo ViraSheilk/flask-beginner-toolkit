@@ -348,7 +348,171 @@ Fix:  Add
 
           if __name__ == "__main__":
           app.run(debug=True)
-   
+          
+5.4 Deleting Notes features
+
+   In this step you enhance the application features by allowing users to delete notes.
+
+   Step 1: Update your backend that is app.py
+                  
+    from flask import Flask, render_template, request
+    app = Flask(__name__)
+     notes = []
+      @app.route("/", methods=["GET", "POST"])
+      def home():
+       if request.method == "POST":
+        note = request.form.get("note")
+        delete_index = request.form.get("delete")
+
+        # Add note
+        if note:
+            notes.append(note)
+
+        # Delete note
+        if delete_index:
+            notes.pop(int(delete_index))
+
+    return render_template("index.html", notes=notes)
+    if __name__ == "__main__":
+    app.run(debug=True)
+
+  Step 2: Update your frontend (index.html)
+     Modify it to include a delete button for each note.
+         
+    <!DOCTYPE html>
+     <html>
+    <head>
+    <title>Notes App</title>
+    </head>
+     <body>
+    <h1>My Notes</h1>
+    <!-- Add Note Form -->
+    <form method="POST">
+        <input type="text" name="note" placeholder="Enter a note">
+        <button type="submit">Add Note</button>
+    </form>
+    <!-- Notes List -->
+    <ul>
+        {% for note in notes %}
+            <li>
+                {{ note }}
+
+                <!-- Delete Form -->
+                <form method="POST" style="display:inline;">
+                    <input type="hidden" name="delete" value="{{ loop.index0 }}">
+                    <button type="submit">Delete</button>
+                </form>
+
+            </li>
+        {% endfor %}
+    </ul>
+    </body>
+    </html>
+
+Step 3: Run the application
+
+       python app.py
+Expected result:
+
+<img width="335" height="150" alt="image" src="https://github.com/user-attachments/assets/1190901e-72b8-425f-b4a9-df16d313762f" />
+
+After clicking delete button:
+
+<img width="235" height="110" alt="image" src="https://github.com/user-attachments/assets/69f1006a-1617-43e2-a01d-c8fc1b4886df" />
+
+5.5 Improving UI styles
+
+In this step we improve the UI style of the Notes app.
+
+Step 1: Update index.html
+
+improve your style using embedded CSS style
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Notes App</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b1f3a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            width: 400px;
+        }
+
+        input {
+            padding: 10px;
+            width: 70%;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        .add-btn {
+            background-color: white;
+            color: #0b1f3a;
+        }
+
+        .delete-btn {
+            background-color: red;
+            color: white;
+            margin-left: 10px;
+        }
+
+        li {
+            margin-top: 10px;
+            list-style: none;
+        }
+    </style>
+     </head>
+
+     <body>
+
+    <div class="container">
+        <h1>My Notes</h1>
+
+        <!-- Add Note -->
+        <form method="POST">
+            <input type="text" name="note" placeholder="Enter a note">
+            <button class="add-btn" type="submit">Add</button>
+        </form>
+
+        <!-- Notes List -->
+        <ul>
+            {% for note in notes %}
+                <li>
+                    {{ note }}
+
+                    <form method="POST" style="display:inline;">
+                        <input type="hidden" name="delete" value="{{ loop.index0 }}">
+                        <button class="delete-btn" type="submit">Delete</button>
+                    </form>
+
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    </body>
+    </html>
+Step 2: Run the app
+
+          python app.py
 
 
 
@@ -356,20 +520,6 @@ Fix:  Add
 
 
     
-
- 
-
-
-
-
-   
-   
-
-
-   
-   
-
-  
 
 
 
