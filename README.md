@@ -283,6 +283,76 @@ How render_templates() works.
 
 How frontend connects to backend.
 
+5.3 Adding Notes Functionality Core Features
+
+We upgrade the notes application from a static web page to its core features in this step.
+
+ We will:
+
+ -Accept user inputs from a form.
+
+ -Store notes temporarily in memory.
+
+ -Display notes on the webpage.
+
+ These introduces key backend components like:
+
+ -HTTP form requests that is GET and POST.
+
+ -Form handling.
+
+ -Dynamic content handling.
+
+ Step 1: Create a Notes Storage
+
+    notes =[]
+   This is a python list that stores notes entered by users.
+
+Step 2: Update your routes handle form
+
+ <img width="371" height="216" alt="image" src="https://github.com/user-attachments/assets/a73ad577-ab4d-4260-81f5-5ff1968c6e12" />
+
+ Methods GET and POST- GET loads the page while POST sends data from the form.
+
+ request.form.get("note")- gets the value from the form input.
+
+ notes.append(note)- adds the new note to the list.
+
+ render_template("index.html", notes=notes)- sends notes to the HTML making them visible to the page.
+
+Step 3: Running the Flask application
+
+In the terminal execute 
+      python app.py
+
+You should see this output or similar:
+
+<img width="587" height="141" alt="image" src="https://github.com/user-attachments/assets/7662ce21-4ea5-4af2-94a3-483dda01de98" />
+
+
+Then open your browser the following should be displayed:
+
+<img width="275" height="144" alt="image" src="https://github.com/user-attachments/assets/5af8f7ad-4f9d-4cd7-bd0d-35a3f53331f4" />
+
+Write a note then click add note on your page, the note is displayed as shown below:
+
+<img width="342" height="214" alt="image" src="https://github.com/user-attachments/assets/caf3f7b8-33ec-43e6-a530-6c79e4e6591b" />
+
+Issues encountered.
+
+Issue 1: Flask app not running
+
+Cause: Missing app.run() block.
+
+Fix:  Add 
+
+          if __name__ == "__main__":
+          app.run(debug=True)
+   
+
+
+
+
 
 
     
