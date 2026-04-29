@@ -514,6 +514,51 @@ Step 2: Run the app
 
           python app.py
 
+Output
+
+<img width="409" height="192" alt="image" src="https://github.com/user-attachments/assets/37b51824-102e-44a5-9f47-46a0a0bf1c0f" />
+
+
+6. AI PROMPT JOURNAL
+   
+   This section documents how AI was used as a learning assistant throughout the development of the flasks Notes app.
+
+   Prompt 1: Installation and Environment set up
+
+   Prompt used: Give me a step-by-step guide to install Flask on Windows/Mac/Linux using a virtual environment.
+
+   AI's response summary- The AI provided a clear guideline on installing python, creating a virtual environment, activating it and installing Flask using pip. It also helped me understand why virtual environments are important in separating project dependencies.
+
+   Prompt 2: Understanding Flask basics
+
+   Prompt used: Explain Flask to a beginner.
+
+    AI's or Chat gpt's response summary:  The AI explained Flask as a lightweight web framework that uses routes to connect URLs to Python functions.
+
+   Helpful part- routes define what happens when a user visits an URL.
+
+   This helped in understanding the structure before coding.
+
+   Prompt 3: Creating a Basic Flask app structure.
+
+   Prompt used: Show me how to structure a simple Flask application.
+
+   AI response summary: The AI showed how to create app.py, initialize flask and defined a basic route that renders content.
+
+   Prompt 4: Fixing why the app was not running.
+
+   Prompt used: My Flask app is not running after i type python app.py why?
+
+   AI response summary: The AI identified the missing block of code app.run as the issue and advised me on how to embed it correctly.
+
+   Evaluation: This was a critical debugging step that helped run the app.
+
+   Prompt 5: Building the Notes app (logic features)
+
+    Prompt used: 
+
+   
+
 
 
 
