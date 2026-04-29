@@ -555,7 +555,37 @@ Output
 
    Prompt 5: Building the Notes app (logic features)
 
-    Prompt used: 
+    Prompt used: How do I store user input in Flask and display it on a page?
+
+    AI's response summary: The AI explained how to use request.form to capture input and store it in a python list.
+
+    Helpful part- suggested i use request.form.get('note') to capture form data.
+
+    This helped in forming the core functionality of the notes app.
+
+   Prompt 6: Connecting Flask to HTML Templates.
+
+    Prompt used: How do I display Python data in an HTML page using Flask?
+
+    AI response summary: The AI explained render_template() and passing variables into HTML templates.
+
+    Helpful part: Pass data using render_template('index.html', notes=notes). which was essential for displaying stored notes in the UI.
+
+   Prompt 7: Building the full notes app
+
+    Prompt used: Help me build a simple Flask notes app step by step.
+
+    AI response summary: The AI combined routing, form handling, and template rendering into a working notes application.
+
+    Helpful part: Use a list to temporarily store notes and update it on POST requests. This was helpful in understanding and developing the final working MVP.
+
+   Prompt 8: Understanding Flask code line by line.
+
+    Prompt used: Explain this flask code line by line for a beginner.
+
+    AI response summary: The AI broke down each part of the Flask app including routes, request handling, and rendering templates.
+
+    Helpful part: @app.route('/') connects a URL to a Python function which helped in solidifying my understanding as i wrote the code in my editor.
 
    
 
