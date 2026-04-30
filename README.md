@@ -25,7 +25,7 @@
    
    The project results in a minimal viable product: A Flask Notes web app which allows users to add notes through a form and view them in a simple webpage.
    
-3. QUICK SUMMARY OF THE TECHNOLOGY
+2. QUICK SUMMARY OF THE TECHNOLOGY
    
    What is Flask?
    Flask is a light weight web framework used to build web applications.
@@ -39,7 +39,7 @@
    For example, Startups oftenly use python flask to create MVPs like simple dashboards, booking systems or task management apps before scaling them into larger platforms.
    It is also commonly used to build APIs that power mobile apps or connect different services together.
    
-5. SYSTEM REQUIREMENTS
+3. SYSTEM REQUIREMENTS
    
    To run this project using Flask, the following requirements are needed:
    
@@ -55,7 +55,7 @@
    
    Virtual environment: venv
    
-7. INSTALLATION AND SET UP INSTRUCTIONS
+4. INSTALLATION AND SET UP INSTRUCTIONS
    
    Step 1: Install Python
    
@@ -517,6 +517,11 @@ Step 2: Run the app
 Output
 
 <img width="409" height="192" alt="image" src="https://github.com/user-attachments/assets/37b51824-102e-44a5-9f47-46a0a0bf1c0f" />
+
+Step 3: API response summary
+
+<img width="384" height="122" alt="image" src="https://github.com/user-attachments/assets/f7a28139-128e-4f13-9dc3-6a13497a750b" />
+
 
 
 6. AI PROMPT JOURNAL
