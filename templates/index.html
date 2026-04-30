@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Notes App</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .note {
+            display: inline-block;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            min-width: 150px;
+        }
+
+        a {
+            margin: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sticky Notes App</h1>
+
+    <!-- Add Note -->
+    <form method="POST">
+        <textarea name="note" placeholder="Write your note..." required></textarea><br><br>
+
+        <label>Pick color:</label>
+        <input type="color" name="color"><br><br>
+
+        <button type="submit">Add Note</button>
+    </form>
+
+    <hr>
+
+    <!-- Display Notes -->
+    {% for note in notes %}
+        <div class="note" style="background: {{ note.color }}">
+            <p>{{ note.content }}</p>
+
+            <a href="/edit/{{ note.id }}">Edit</a>
+            <a href="/delete/{{ note.id }}">Delete</a>
+        </div>
+    {% endfor %}
+
+</body>
+</html>

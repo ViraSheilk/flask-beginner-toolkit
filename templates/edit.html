@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Note</title>
+</head>
+<body>
+
+    <h2>Edit Note</h2>
+
+    <form method="POST" action="/update/{{ note.id }}">
+        <textarea name="note" required>{{ note.content }}</textarea><br><br>
+
+        <label>Change color:</label>
+        <input type="color" name="color" value="{{ note.color }}"><br><br>
+
+        <button type="submit">Update Note</button>
+    </form>
+
+    <br>
+    <a href="/">Back</a>
+
+</body>
+</html>
