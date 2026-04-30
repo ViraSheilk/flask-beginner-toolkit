@@ -587,6 +587,96 @@ Output
 
     Helpful part: @app.route('/') connects a URL to a Python function which helped in solidifying my understanding as i wrote the code in my editor.
 
+
+7. COMMON ISSUES AND FIXES
+
+   Problem
+
+   Running: app.py
+
+   The server failed to start by producing no output.
+
+   Cause: The flask application missed the line of code to activate the server.
+
+   Fix: The AI recommended i updated the missing the following piece of code in my app.py as it was the missing dependency.
+
+       if __name__ == __"main"__:
+       app.run(debug=True)
+   What i learned: Flask does not run automatically after installation, a missing dependency may fail to start the server therefore the code to run server is important.
+
+   Issue 2: Virtual Environment Not Activated
+
+    Problem: The flask commands were not working and the modules were not found.
+
+    Cause: The virtual environt (venv) was not activated before running the module.
+
+    Fix: I activated it using this on my git bash:
+   
+                   source venv/Scripts/activate
+
+   What I learned: Each project needs to use its own environment to avoid dependency conflicts.
+
+   Issue 3: Templates not rendering.
+
+   Problem: Flask returned an error when trying to learn index.html
+
+   Cause: The HTML file was not placed inside a templates folder.
+
+   Fix: Created the corrected structure in the right folder.
+
+   What i learned: Flask only looks for HTML files inside a folder named templates due to the concept of convetion over configuration.
+
+   Issue 4: Form data not being captured
+
+   Problem: Submitting a note did not display any data.
+
+   Cause: Had incorrect handling of form data as it missed POST method in the route.
+
+   Fix: Updated my route to include post.
+
+   What I learned: Forms require POST requests and Flask needs to be configured first to run them.
+
+   Issue 5: Notes not updating on page
+
+   Problem: Notes were not showing after submission
+
+    Cause: The notes list was not being passed to the template.
+
+    Fix: updated the code to pass notes.
+   
+        return render_template("index.html", notes=notes)
+
+   What i learned: Data must be explicitly passed from Flask to HTML using render_template().
+
+8.HELPFUL RESOURCES
+
+These resources helped resolve issues and deepen understanding:
+
+Flask Official Documentation:
+
+https://flask.palletsprojects.com/
+
+Stack Overflow (for debugging errors):
+
+https://stackoverflow.com/
+
+Python Virtual Environment Guide:
+
+https://docs.python.org/3/library/venv.html
+
+9. REFLECTION
+
+    Through this project, I've learned how Flask is used by developers to quickly build API-based web applications with minimal setup. It showed me how backend logic,
+    routing and user input handling come together to create a working application.
+
+   Most of the challenges I faced were caused by small but important issues, such as missing dependencies or configuration steps. Solving these errors helped me better         understand how Flask works step by step and improved my debugging skills.
+
+   Overall, the project strengthened my ability to build and troubleshoot a simple web application from scratch.
+
+   
+
+   
+
    
 
 
