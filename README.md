@@ -522,6 +522,9 @@ Step 3: API response summary
 
 <img width="384" height="122" alt="image" src="https://github.com/user-attachments/assets/f7a28139-128e-4f13-9dc3-6a13497a750b" />
 
+<img width="951" height="436" alt="image" src="https://github.com/user-attachments/assets/a0b623c1-ceb2-4356-9a0a-21eb9d731c93" />
+
+
 
 
 6. AI PROMPT JOURNAL
