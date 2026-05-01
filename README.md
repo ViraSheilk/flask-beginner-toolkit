@@ -536,9 +536,10 @@ Step 3: API response summary
 
    Prompt 2: Understanding Flask basics
 
-   Prompt used: Explain Flask to a beginner.
+   Prompt used: Explain Flask to a beginner by explaining its syntax and what it does.
 
-    AI's or Chat gpt's response summary:  The AI explained Flask as a lightweight web framework that uses routes to connect URLs to Python functions.
+    AI's or Chat gpt's response summary:  The AI explained Flask as a lightweight web framework that uses routes to connect URLs to Python functions and highlighted syntax
+    Flask uses.
 
    Helpful part- routes define what happens when a user visits an URL.
 
@@ -546,7 +547,7 @@ Step 3: API response summary
 
    Prompt 3: Creating a Basic Flask app structure.
 
-   Prompt used: Show me how to structure a simple Flask application.
+   Prompt used: Show me how to structure a simple Flask application as a complete beginner with flask framework.
 
    AI response summary: The AI showed how to create app.py, initialize flask and defined a basic route that renders content.
 
@@ -593,7 +594,7 @@ Step 3: API response summary
     Helpful part: @app.route('/') connects a URL to a Python function which helped in solidifying my understanding as i wrote the code in my editor.
 
 
-7. COMMON ISSUES AND FIXES
+8. COMMON ISSUES AND FIXES
 
    Problem
 
@@ -623,7 +624,7 @@ Step 3: API response summary
 
    Issue 3: Templates not rendering.
 
-   Problem: Flask returned an error when trying to learn index.html
+   Problem: Flask returned an error when trying to run index.html
 
    Cause: The HTML file was not placed inside a templates folder.
 
